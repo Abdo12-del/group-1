@@ -9,6 +9,11 @@ export default defineConfig(() => ({
     host: "::",
     port: 8080,
   },
+  build: {
+    rollupOptions: {
+      external: ['workbox-window']
+    }
+  },
   plugins: [
     dyadComponentTagger(), 
     react(),
